@@ -19,7 +19,7 @@ func FormPost(writer http.ResponseWriter, request *http.Request) {
 	fmt.Fprintf(writer, "Halo nama first %s last %s", firstName, lastName)
 }
 
-func TestFormPost(t *testing.T) {
+func TestFormPost(t *testing.T) { 
 	requestBody := strings.NewReader("first_name=Difa&last_name=Ardiansyah")
 	request := httptest.NewRequest(http.MethodPost, "http://localhost:8080", requestBody)
 	request.Header.Add("Content-Type", "application/x-www-form-urlencoded")
