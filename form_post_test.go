@@ -14,7 +14,6 @@ func FormPost(writer http.ResponseWriter, request *http.Request) {
 	if err != nil {
 		panic(err)
 	}
-
 	firstName := request.PostForm.Get("first_name")
 	lastName := request.PostForm.Get("last_name")
 	fmt.Fprintf(writer, "Halo nama first %s last %s", firstName, lastName)
