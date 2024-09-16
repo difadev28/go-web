@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+</head>
+<body>
+{{range $index, $element := .Hobbies}}
+  <p>{{$index}} - {{$element}}</p>
+{{else}}
+    <p>Anda tidak punya hobi</p>
+{{end}}
+{{range $index, $element := .Hobbies}}
+  {{if eq $element "Sepak Bola"}}
+  <p>{{$index}} - {{$element}}</p>
+  {{end}}
+{{else}}
+    <p>Anda tidak punya hobi</p>
+{{end}}
+</body>
+</html>

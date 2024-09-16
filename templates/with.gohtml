@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+</head>
+<body>
+  {{/* Sample komentar */}}
+  <p>Hello {{.Name}}</p>
+  {{with .Address}}
+    <p>Provinsi {{.Province}}</p>
+    <p>Jalan {{.Street}}</p>
+  {{else}}
+  <p>Anda Tidak Punya Alamat</p>
+  {{end}}
+</body>
+</html>
